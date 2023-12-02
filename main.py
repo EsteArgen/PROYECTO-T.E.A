@@ -115,10 +115,10 @@ def AImodePlay(difficulty, font):
     nboard = board()
 
     if difficulty == 'EASY':
-        f = font.render('easy', 1, COLOR_WHITE)
+        f = font.render('', 1, COLOR_WHITE)
         bot = easyAI('b')
     elif difficulty == 'HARD':
-        f = font.render('hard', 1, COLOR_WHITE)
+        f = font.render('', 1, COLOR_WHITE)
         bot = hardAI('b')
     else:
         raise Exception('Unknown difficulty {0}'.format(difficulty))
