@@ -17,7 +17,6 @@ from easyAI import *
 pygame.init()
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
-# Create pygame screen and objects
 surface = pygame.display.set_mode(WINDOW_SIZE)
 pygame.display.set_caption('¡The game of amazons!')
 clock = pygame.time.Clock()

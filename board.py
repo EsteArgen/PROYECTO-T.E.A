@@ -55,13 +55,8 @@ class board():
                 self.square_gr.add(temp)
                 self.matrix[y][x] = temp
 
-        # state:
-        # 0: stage of selecting amazon,
-        # 1: stage of selecting destination
-        # 2: stage of selecting arrow
         self.state = 0 #  Esta variable almacena el estado actual del juego, que puede ser 0 (selección de Amazona), 1 (selección de destino) o 2 (selección de flecha)
 
-        # save selected queen position
         self.prePos = (-1, -1) # Guarda la posición previa seleccionada por el jugador. Inicialmente se establece en (-1, -1) para indicar que no se ha seleccionado nada.
         self.move = [(-1, -1), (-1, -1), (-1, -1)] # s una lista que almacena información sobre los movimientos realizados por el jugador. Cada elemento de la lista es una tupla que contiene información sobre las posiciones de la Amazona, el destino y la flecha seleccionados.
 
