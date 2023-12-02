@@ -1,44 +1,23 @@
-# 👩‍💻🩻 Game of the Amazon 🔐🧑‍💻
-<span style="font-size: 24px;"></span>
-_____________________________
+## Amazons chess
 
-"Game of the Amazon" es un juego de mesa estratégico para dos jugadores que desafía tu habilidad de planificación y toma de decisiones. El juego se desarrolla en un tablero cuadriculado donde cada jugador controla un ejército de reinas amazonas.
+play amazons chess with AI or your friend through network.
 
-![image](https://github.com/EsteArgen/PROYECTO-T.E.A/assets/101402836/b5fb0585-0bca-4527-8a6b-e5fb0129e0c8)
+## Game of the Amazons
+<p align="center"><img src="asset/board.PNG" width="300" align="middle"></p>
+White moves first, and the players alternate moves thereafter. Each move consists of two parts. First, one moves one of one's own amazons one or more empty squares in a straight line (orthogonally or diagonally), exactly as a queen moves in chess; it may not cross or enter a square occupied by an amazon of either color or an arrow. Second, after moving, the amazon shoots an arrow from its landing square to another square, using another queenlike move. This arrow may travel in any orthogonal or diagonal direction (even backwards along the same path the amazon just traveled, into or across the starting square if desired). An arrow, like an amazon, cannot cross or enter a square where another arrow has landed or an amazon of either color stands. The square where the arrow lands is marked to show that it can no longer be used. The last player to be able to make a move wins. Draws are impossible.
 
+## Install environment
 
-# 🎖️ Objetivo del Juego 🎖️
-<span style="font-size: 24px;"></span>
-_____________________________
-El objetivo principal del juego es eliminar las reinas del oponente mientras proteges las tuyas. Las reinas pueden moverse en líneas rectas y disparar flechas en múltiples direcciones, creando un entorno de juego dinámico y táctico.
-
-![image](https://github.com/EsteArgen/PROYECTO-T.E.A/assets/101402836/d53c141f-d235-45d4-8d9f-2f8dd2ea2b6b)
+- Install [python](https://www.python.org/downloads/)
+- Install [pygame-menu](https://github.com/ppizarror/pygame-menu): `pip install pygame-menu` (*)
+- Install [pygame](https://www.pygame.org/docs/): `pip install pygame`
 
 
-# 👮‍♂️ Reglas Principales 👮‍♀️
-<span style="font-size: 24px;"></span>
-_____________________________
+## Personal information
+-Intro: I implemented this game as a small project when I was a third year student  
+-Name: ThanhLongDo  
+-Degree: engineer's degree in computer Science, Bach Khoa University  
+-Email: 1511799@hcmut.edu.vn
 
-- Cada jugada consiste en mover una reina y luego disparar una flecha en una dirección.
-- Las reinas se mueven en líneas rectas en horizontal, vertical o diagonal.
-- Al disparar una flecha, se crea un bloqueo en la dirección seleccionada, lo que afecta el movimiento de las reinas.
-- El juego continúa hasta que no sea posible realizar más movimientos.
+(*) : Thanks to Dr. Nils Christian Ditzel from Germany. If you can't run the game due to syntax errors related to pygame-menu, please try this command: `pip install pygame-menu==1.96.1`
 
-![image](https://github.com/EsteArgen/PROYECTO-T.E.A/assets/101402836/7e808ab1-d721-4ea1-98ca-061b5146fb61)
-
-
-# 🥷 Estrategia y Planificación 🥷
-<span style="font-size: 24px;"></span>
-_____________________________________
-
-"Game of the Amazon" requiere una estrategia cuidadosa y una planificación avanzada. Los jugadores deben anticipar los movimientos del oponente, bloquear caminos y encontrar oportunidades para atacar. Cada partida es única y presenta desafíos estratégicos emocionantes.
-
-
-![image](https://github.com/EsteArgen/PROYECTO-T.E.A/assets/101402836/a78e76e3-1b4a-4b6a-a39c-1aa2dfa4ae57)
-
-
-# 🚨 REQUERIMIENTOS DE EJECUCIÓN 🚨
-<span style="font-size: 24px;"></span>
-____________________________________
-- Instalar pygame: **pip install pygame**
-- Instalar pygame-menu: **pip install pygame-menu==1.96.1**
