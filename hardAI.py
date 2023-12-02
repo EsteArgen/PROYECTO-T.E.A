@@ -4,28 +4,7 @@ import time
 from collections import deque
 import sys
 import random
-
-#import easyAI class
 from easyAI import *
-
-# ======================== AI class =======================================
-# state matrix and coordinate space
-# ...w..w...
-# ..........
-# ..........
-# w........w
-# ..........
-# ..........
-# b........b
-# ..........
-# ..........
-# ...b..b...
-# 0------>y
-# |
-# |
-# |
-# x
-
 
 class hardAI(easyAI):
     def __init__(self, str_name):
@@ -35,7 +14,7 @@ class hardAI(easyAI):
         start_time = time.time()
         move_list = self.generate_move(state)
 
-        if not move_list:  # lose
+        if not move_list:  
             return []
 
         resultMove = self.valuation_func(state, move_list, True, start_time)
@@ -57,24 +36,19 @@ class hardAI(easyAI):
         resultMove = []
         while move_list:
 
-            #pop from queue
             move = move_list.popleft()
-            # print(move)
-           
-            #change state
             new_board = self.board_copy(state)
             (x, y) = move[0]
             new_board[x][y] = '.'
             (x, y) = move[1]
             new_board[x][y] = self.str
 
-            # +self.t2(new_board,AI_turn)
+        
             value_func = self.t1Func(new_board, AI_turn)
 
             if not resultMove:
                 resultMove = [[move[0][0], move[0][1]], [
                     move[1][0], move[1][1]], [move[2][0], move[2][1]], value_func]
-                #print("result move",resultMove)
 
             if value_func > resultMove[3]:
                 resultMove[0][0] = move[0][0]
@@ -85,16 +59,13 @@ class hardAI(easyAI):
                 resultMove[2][1] = move[2][1]
                 resultMove[3] = value_func
 
-            # calculate time, return immediately if time out
             elapse = time.time() - start_time
-            # print(elapse)
+            
             if elapse > 2.9:
                 return resultMove
 
-        #print("move list", move_list)
         return resultMove
 
-    # calculate t1. Read article for more information
     def t1Func(self, state, AI_turn):  # for queen terrority
         value_t1 = 0
 
@@ -123,7 +94,6 @@ class hardAI(easyAI):
 
         return value_t1
 
-    # calculate t2. Read article for more information
     def t2Func(self, state, AI_turn):  # for king terrority
         value_t2 = 0
 
@@ -236,8 +206,6 @@ class hardAI(easyAI):
                     if i+index <= 9 and j+index <= 9 and new_board[i+index][j+index] == '.':
                         new_board[i+index][j+index] = 't'
 
-
-            # enqueue
             for i in range(10):
                 for j in range(10):
                     if new_board[i][j] == 't':
@@ -290,7 +258,6 @@ class hardAI(easyAI):
                 if i+1 <= 9 and j+1 <= 9 and new_board[i+1][j+1] == '.':
                     new_board[i+1][j+1] = 't'
 
-            # enqueue
             for i in range(10):
                 for j in range(10):
                     if new_board[i][j] == 't':
